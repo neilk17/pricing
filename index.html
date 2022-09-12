@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="./sass/styles.css">
+    <title>Neil Kanakia | Interactive pricing component</title>
+  </head>
+  <body class="background">
+    <div class="container">
+      <header class="header">
+        <h1 class="title">Simple, traffic-based pricing</h1>
+        <p class="subtitle">Sign-up for our 30-day trial.<br>No credit card required. </p>
+      </header>
+      <main class="main-card">
+        <p class="views"><span class="view-amount">100K </span> Pageviews</p>
+        <div class="slider-container">
+          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        </div>
+        <p class="cost"><span id="cost-amount" class="cost-amount"></span>/month</p>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive pricing component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
-
-  Pageviews
-  $ /month
-
-  Monthly Billing
-  Yearly Billing 25% discount
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <div class="billing">
+          <p>Monthly Billing</p>
+          <label for="" class="switch">
+            <input type="checkbox" class="checkbox">
+            <span class="switch-slider round"></span>
+          </label>
+          <p>Yearly Billing <span class="discount">-25%</span></p>
+        </div>
+        <div class="line"></div>
+        <ul class="benefits">
+          <li><img class="check" src="./images/icon-check.svg" alt=""> Unlimited websites</li>
+          <li><img class="check" src="./images/icon-check.svg" alt="">100% data ownership</li>
+          <li><img class="check" src="./images/icon-check.svg" alt="">Email reports</li>
+        </ul>
+        
+        <button class="btn">Start my trial</button>
+      </main>
+      <section class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://neilkanakia.xyz"></a>Neil Kanakia</a>.
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>

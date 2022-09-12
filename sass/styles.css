@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+:root {
+  --soft-cyan: #a5f3eb;
+  --strong-cyan: #10d5c2;
+  --light-grayish-red: #feece7;
+  --light-red: #ff8c66;
+  --pale-blue: #bdccff;
+  --white: #ffffff;
+  --very-pale-blue: #fafbff;
+  --light-grayish-blue1: #eaeefb;
+  --light-grayish-blue2: #cdd7ee;
+  --grayish-blue: #858fad;
+  --dark-desaturated-blue: #293356;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  margin: 0;
+}
+
+.background {
+  background-image: url("../images/bg-pattern.svg");
+  background-color: var(--very-pale-blue);
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  background-image: url("../images/pattern-circles.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 170px;
+  margin-top: 4rem;
+  text-align: center;
+}
+.header .title {
+  color: var(--dark-desaturated-blue);
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-top: 2rem;
+}
+.header .subtitle {
+  color: var(--grayish-blue);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.main-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px var(--light-grayish-blue1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 325px;
+  height: 480px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+}
+.main-card .views {
+  color: var(--grayish-blue);
+  font-size: 0.75rem;
+  margin: 1.5rem auto;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.main-card .slider-container {
+  width: 80%;
+}
+.main-card .slider-container .slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  -moz-appearance: none;
+       appearance: none;
+  border-radius: 5px;
+  width: 100%; /* Full-width */
+  height: 7px; /* Specified height */
+  background: var(--soft-cyan);
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */ /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+.main-card .slider-container .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #0fdec9;
+  background-image: url("../images/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0px 10px 30px var(--soft-cyan);
+  cursor: pointer;
+}
+.main-card .cost {
+  color: var(--grayish-blue);
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+.main-card .cost .cost-amount {
+  color: var(--dark-desaturated-blue);
+  font-size: 1.75rem;
+  font-weight: 800;
+  padding-right: 0.5rem;
+}
+.main-card .billing {
+  color: var(--grayish-blue);
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  font-size: 0.75rem;
+}
+.main-card .billing .switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+.main-card .billing .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.main-card .billing .switch .switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+.main-card .billing .switch .switch-slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+}
+.main-card .billing .switch input:checked + .switch-slider {
+  background-color: var(--soft-cyan);
+}
+.main-card .billing .switch input:focus + .switch-slider {
+  box-shadow: 0 0 1px var(--soft-cyan);
+}
+.main-card .billing .switch input:checked + .switch-slider:before {
+  transform: translateX(26px);
+}
+.main-card .billing .switch .switch-slider.round {
+  border-radius: 30px;
+}
+.main-card .billing .switch .switch-slider.round:before {
+  border-radius: 50%;
+}
+.main-card .billing .discount {
+  color: var(--light-red);
+  background-color: #fdf0ec;
+  border-radius: 12px;
+  padding: 5px 8px;
+}
+.main-card .line {
+  width: 100%;
+  border-bottom: 1px solid var(--light-grayish-blue1);
+  margin-top: 2rem;
+}
+.main-card .benefits {
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+}
+.main-card .benefits li {
+  color: var(--grayish-blue);
+  margin: 10px 0;
+}
+.main-card .btn {
+  border: none;
+  background-color: var(--dark-desaturated-blue);
+  border-radius: 25px;
+  color: var(--pale-blue);
+  font-weight: 800;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.main-card .btn:hover {
+  background-color: var(--pale-blue);
+  color: var(--dark-desaturated-blue);
+  cursor: pointer;
+  transition: ease-in 0.25s;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--cyan);
+}
+
+@media only screen and (min-width: 1440px) {
+  .background {
+    background-position: top right;
+  }
+}/*# sourceMappingURL=styles.css.map */
